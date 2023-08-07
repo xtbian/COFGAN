@@ -1,0 +1,73 @@
+# basic configs
+scale: 2
+manual_seed: 0
+verbose: false
+
+
+# dataset configs
+dataset:
+  degradation:
+    type: BD
+    sigma: 1.5
+
+  test:
+    name: tos
+    gt_seq_dir: E:/postgraduate/FFGAN/data/tos3/512
+    lr_seq_dir: ~
+    filter_list: ~
+    num_worker_per_gpu: 4
+    pin_memory: true
+
+
+# model configs
+model:
+  name: FRVSR
+
+  generator:
+    name: FRNet  # frame-recurrent network
+    in_nc: 3
+    out_nc: 3
+    nf: 64
+    nb: 16
+
+    load_path: E:/postgraduate/FFGAN/experiments_BD/FRVSR/FRVSR_REDS_2xSR_2GPU/train/ckpt/G_iter400000.pth
+
+
+# validation configs
+test:
+  # whether to save the generated SR results
+  save_res: false
+  res_dir: ~   # use default dir
+
+  # whether to save the test results in a json file
+  save_json: true
+  json_dir: ~  # use default dir
+
+  padding_mode: reflect
+  num_pad_front: 5
+
+
+# metric configs
+metric:
+  PSNR:
+    colorspace: y
+
+  SSIM:
+    colorspace: y
+  #
+  LPIPS:
+    model: net-lin
+    net: alex
+    colorspace: rgb
+    spatial: false
+    version: 0.1
+  #
+  tLP:
+    model: net-lin
+    net: alex
+    colorspace: rgb
+    spatial: false
+    version: 0.1
+
+  tOF:
+    colorspace: y
