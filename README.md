@@ -1,7 +1,7 @@
 # COFGAN
 
 ### Introduction
-This is a PyTorch reimplementation of **COFGAN**: GAN-based Video Super-Resolution Method by optiCal flOw-Free Motion Estimation and Compensation. Since our code is derived from TecoGAN, where the model names FRVSR and TecoGAN stand for our models COFFEE and COFVSR respectively. Please refer to the official TensorFlow implementation [TecoGAN-TensorFlow](https://github.com/thunil/TecoGAN) for more information.
+This is a PyTorch reimplementation of **COFGAN**: GAN-based Video Super-Resolution Method by optiCal flOw-Free Motion Estimation and Compensation. 
 
 Supported model training/testing on the [REDS](https://seungjunnah.github.io/Datasets/reds.html) dataset.
 
