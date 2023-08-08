@@ -94,7 +94,7 @@ data
     └─ Bicubic4xLR
 ```
 
-2. Run TecoGAN for 4x SR. The results will be saved in `./results`. You can specify which model and how many gpus to be used in `test.sh`.
+2. Run COFGAN for 4x SR. The results will be saved in `./results`. You can specify which model and how many gpus to be used in `test.sh`.
 ```bash
 bash ./test.sh BD TecoGAN/TecoGAN_REDS_4xSR_2GPU
 ```
